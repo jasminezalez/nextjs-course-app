@@ -20,13 +20,13 @@ export async function getServerSideProps({params, req, res}) {
   const response = await fetch(`http://localhost:3000/api/note/${params.id}`)
 
   if (!response.ok) {
-    res.writeHead(302, { Location: '/notes' })
+    res.writeHead(302, { Location: '/teas' })
     res.end()
     return {props: {}}
   }
 
   const {data} = await response.json()
-  
+  // add functionality here to search an API for tea or something
   
   if (data) {
     return {

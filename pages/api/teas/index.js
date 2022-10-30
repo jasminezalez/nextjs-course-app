@@ -1,16 +1,16 @@
 import nc from 'next-connect'
-import notes from '../../../src/data/data'
+import teas from '../../../src/data/data'
 
 const handler = nc()
   .get((req, res) => {
-    res.json({data: notes})
+    res.json({data: teas})
   })
   .post((req, res) => {
     const id = Date.now()
-    const note = {...req.body, id}
+    const tea = {...req.body, id}
 
-    notes.push(note)
-    res.json({data: note})
+    teas.push(tea)
+    res.json({data: tea})
   })
   
 

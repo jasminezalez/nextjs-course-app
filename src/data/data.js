@@ -1,8 +1,7 @@
-const notes = new Array(15)
-  .fill(1)
-  .map((_, i) => ({
+const teas = ["earl grey", "chamomile", "matcha green tea", "peppermint", "chai", "jasmine green tea", "barley tea", "shilagit", "oolong tea", "lemon balm tea", "lemon verbena tea", "lemongrass tea"]
+  .map((el, i) => ({
     id: Date.now() + i,
-    title: `Note ${i}`
+    title: `${el}`
   }))
 
-module.exports = notes
+module.exports = teas
